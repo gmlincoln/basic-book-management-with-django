@@ -1,8 +1,6 @@
 # myProject
 
-This project, `myProject`, contains an application
- called `myApp` and uses a virtual environment to manage dependencies. 
-The virtual environment is created in a directory called `.venv`.
+This project, `myProject`, contains an application called `myApp` and uses a virtual environment to manage dependencies. The virtual environment is created in a directory called `.venv`.
 
 ## Prerequisites
 
