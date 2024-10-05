@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+
+<div class="container mt-5">
+    <h2>Add a Book</h2>
+    <form>
+        <!-- Book Name -->
+        <div class="mb-3">
+            <label for="bookName" class="form-label">Book Name</label>
+            <input type="text" class="form-control" id="bookName" name="book_name" required>
+        </div>
+
+        <!-- Book Author -->
+        <div class="mb-3">
+            <label for="bookAuthor" class="form-label">Book Author</label>
+            <input type="text" class="form-control" id="bookAuthor" name="book_author" required>
+        </div>
+
+        <!-- Book Image -->
+        <div class="mb-3">
+            <label for="bookImage" class="form-label">Book Image</label>
+            <input type="file" class="form-control" id="bookImage" name="book_image" accept="image/*" required>
+        </div>
+
+        <!-- Published Date -->
+        <div class="mb-3">
+            <label for="publishedDate" class="form-label">Published Date</label>
+            <input type="date" class="form-control" id="publishedDate" name="published_date" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
+{% endblock body %}

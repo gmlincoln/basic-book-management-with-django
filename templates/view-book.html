@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<div class="container mt-5">
+    <h2 class="text-center m-4">Books List</h2>
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Published Date</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example Row 1 -->
+            <tr>
+                <th scope="row">1</th>
+                <td>The Great Gatsby</td>
+                <td>F. Scott Fitzgerald</td>
+                <td>1925-04-10</td>
+                <td>
+                    <a href="#" class="btn btn-info btn-sm">View</a>
+                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+            <!-- Example Row 2 -->
+            <tr>
+                <th scope="row">2</th>
+                <td>To Kill a Mockingbird</td>
+                <td>Harper Lee</td>
+                <td>1960-07-11</td>
+                <td>
+                    <a href="#" class="btn btn-info btn-sm">View</a>
+                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+            <!-- More rows can be added here -->
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock body %}
