@@ -13,3 +13,7 @@ def addBook(req):
 def viewBook(req):
 
     return render(req, 'view-book.html')
+
+def singleView(req):
+
+    return render(req, 'single-view.html')
