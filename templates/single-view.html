@@ -6,22 +6,21 @@
     <div class="row">
         <!-- Book Image -->
         <div class="col-md-4">
-            <img src="https://via.placeholder.com/300x400" alt="Book Image" class="img-fluid rounded">
+            <img src="/{{book.book_image}}" style="height: 350px; width:300px" alt="Book Image"
+                class="img-fluid rounded">
         </div>
 
         <!-- Book Details -->
         <div class="col-md-8">
-            <h2 class="mb-3">Book Title</h2>
-            <p><strong>Author:</strong> John Doe</p>
-            <p><strong>Published Date:</strong> 2023-07-15</p>
-            <p><strong>Description:</strong> This is a detailed description of the book. It provides insights into
-                the book's content, its themes, and any other relevant information that readers might want to know.
-            </p>
+            <h2 class="mb-3">{{book.book_name}}</h2>
+            <p><strong>Author:</strong> {{book.book_author}}</p>
+            <p><strong>Published Date:</strong> {{book.published_date}}</p>
+
 
             <!-- Action Buttons -->
             <a href="#" class="btn btn-warning btn-sm">Edit</a>
-            <a href="#" class="btn btn-danger btn-sm">Delete</a>
-            <a href="#" class="btn btn-secondary btn-sm">Back to List</a>
+            <a href="{% url 'deleteBook' book.id %}" class="btn btn-danger btn-sm">Delete</a>
+            <a href="{% url 'viewBook' %}" class="btn btn-secondary btn-sm">Back to List</a>
         </div>
     </div>
 </div>

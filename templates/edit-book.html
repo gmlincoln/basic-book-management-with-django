@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<div class="container mt-5">
+    <h2>Edit Book</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <input type="text" name="book_id" value="{{book.id}}" style="display: none;">
+
+        <!-- Book Name -->
+        <div class="mb-3">
+            <label for="bookName" class="form-label">Book Name</label>
+            <input type="text" class="form-control" id="bookName" name="book_name" value="{{book.book_name}}" required>
+        </div>
+
+        <!-- Book Author -->
+        <div class="mb-3">
+            <label for="bookAuthor" class="form-label">Book Author</label>
+            <input type="text" class="form-control" id="bookAuthor" name="book_author" value="{{book.book_author}}"
+                required>
+        </div>
+
+        <!-- Book Image -->
+        <div class="mb-3">
+            <label for="bookImage" class="form-label">Book Image</label>
+            <br>
+            {% if book.book_image %}
+            <img src="/{{book.book_image}}" style="height: 100px; width:70px;" alt="">
+            {% endif %}
+            <input type="file" class="form-control" id="bookImage" name="book_image">
+        </div>
+
+        <!-- Published Date -->
+        <div class="mb-3">
+            <label for="publishedDate" class="form-label">Published Date</label>
+            <input type="date" class="form-control" id="publishedDate" name="published_date"
+                value="{{book.published_date|date:'Y-m-d'}}" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+{% endblock body %}

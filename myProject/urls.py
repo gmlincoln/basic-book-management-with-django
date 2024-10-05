@@ -5,7 +5,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from myProject.views import addBook, homePage, singleView, viewBook
+from myProject.views import addBook, deleteBook, editBook, homePage, singleView, viewBook
 
 
 
@@ -14,7 +14,9 @@ urlpatterns = [
     path('', homePage, name='homePage'),
     path('addBook/', addBook, name='addBook'),
     path('viewBook/', viewBook, name='viewBook'),
-    path('singleView/', singleView, name='singleView'),
+    path('singleView/<int:book_id>', singleView, name='singleView'),
+    path('deleteBook/<int:book_id>', deleteBook, name='deleteBook'),
+    path('editBook/<int:book_id>', editBook, name='editBook'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

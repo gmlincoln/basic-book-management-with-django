@@ -6,7 +6,8 @@
 
 <div class="container mt-5">
     <h2>Add a Book</h2>
-    <form>
+    <form method="POST" action="{% url 'addBook' %}" enctype="multipart/form-data">
+        {% csrf_token %}
         <!-- Book Name -->
         <div class="mb-3">
             <label for="bookName" class="form-label">Book Name</label>
@@ -22,7 +23,7 @@
         <!-- Book Image -->
         <div class="mb-3">
             <label for="bookImage" class="form-label">Book Image</label>
-            <input type="file" class="form-control" id="bookImage" name="book_image" accept="image/*" required>
+            <input type="file" class="form-control" id="bookImage" name="book_image" required>
         </div>
 
         <!-- Published Date -->
